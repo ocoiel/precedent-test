@@ -1,6 +1,5 @@
 import { ReactNode, useState } from "react";
 import * as TooltipPrimitive from "@radix-ui/react-tooltip";
-import { AnimatePresence } from "framer-motion";
 import useWindowSize from "@/lib/hooks/use-window-size";
 import Leaflet from "./leaflet";
 
@@ -31,7 +30,7 @@ export default function Tooltip({
       {openTooltip && isMobile && (
         <Leaflet setShow={setOpenTooltip}>
           {typeof content === "string" ? (
-            <span className="flex min-h-[150px] w-full items-center justify-center bg-white px-10 text-center text-sm text-gray-700">
+            <span className="flex min-h-[150px] w-full items-center justify-center bg-white px-10 text-center text-sm text-gray-700 dark:bg-black dark:text-gray-200">
               {content}
             </span>
           ) : (
@@ -48,19 +47,19 @@ export default function Tooltip({
             <TooltipPrimitive.Content
               sideOffset={4}
               side="top"
-              className="z-30 hidden animate-slide-up-fade items-center overflow-hidden rounded-md border border-gray-200 bg-white drop-shadow-lg sm:block"
+              className="z-30 hidden animate-slide-up-fade items-center overflow-hidden rounded-md border border-gray-200 bg-white drop-shadow-lg dark:border-gray-800 dark:bg-black dark:drop-shadow-lg sm:block"
             >
-              <TooltipPrimitive.Arrow className="fill-current text-white" />
+              <TooltipPrimitive.Arrow className="fill-current text-white dark:text-black" />
               {typeof content === "string" ? (
                 <div className="p-5">
-                  <span className="block max-w-xs text-center text-sm text-gray-700">
+                  <span className="block max-w-xs text-center text-sm text-gray-700 dark:text-gray-300">
                     {content}
                   </span>
                 </div>
               ) : (
                 content
               )}
-              <TooltipPrimitive.Arrow className="fill-current text-white" />
+              <TooltipPrimitive.Arrow className="fill-current text-white dark:text-black" />
             </TooltipPrimitive.Content>
           </TooltipPrimitive.Root>
         </TooltipPrimitive.Provider>
