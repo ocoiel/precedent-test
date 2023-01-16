@@ -1,13 +1,6 @@
-import { FADE_IN_ANIMATION_SETTINGS } from "@/lib/constants";
-import { AnimatePresence, motion } from "framer-motion";
-import { useSession } from "next-auth/react";
-import Image from "next/image";
-import Link from "next/link";
-import { ReactNode, useState, useEffect } from "react";
+import { ReactNode } from "react";
 import Meta from "./meta";
-import { useSignInModal } from "./sign-in-modal";
-import UserDropdown from "./user-dropdown";
-import { useTheme } from "next-themes";
+
 import Footer from "./footer";
 import Header from "./header";
 
