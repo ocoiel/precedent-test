@@ -26,7 +26,7 @@ export default function Header() {
       <div
         className={`fixed top-0 w-full ${
           scrolled
-            ? "border-b border-gray-200 bg-white/50 backdrop-blur-xl"
+            ? "border-b border-gray-200 bg-white/50 backdrop-blur-xl dark:border-gray-700 dark:bg-black/50"
             : "bg-white/0"
         } z-30 transition-all`}
       >
