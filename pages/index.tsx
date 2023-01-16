@@ -87,12 +87,12 @@ export default function Home() {
             rel="noopener noreferrer"
           >
             <Github />
-            <p className="text-center">
+            <div className="text-center">
               Star on GitHub{" "}
               <span className="text-center font-bold">
                 <GithubStarButton />
               </span>
-            </p>
+            </div>
           </a>
         </motion.div>
       </motion.div>

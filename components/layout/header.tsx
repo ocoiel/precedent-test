@@ -22,12 +22,12 @@ export default function Header() {
   return (
     <>
       <SignInModal />
-      <div className="fixed h-screen w-screen bg-gradient-to-br from-indigo-50 via-white to-cyan-100 transition-all duration-200 dark:from-zinc-900 dark:via-slate-800 dark:to-black" />
+      <div className="fixed h-screen w-screen bg-gradient-to-br from-indigo-50 via-white to-cyan-100 transition-colors duration-200 dark:from-zinc-900 dark:via-slate-800 dark:to-black" />
       <div
         className={`fixed top-0 w-full ${
           scrolled
-            ? "border-b border-gray-200 bg-white/50 backdrop-blur-xl dark:border-gray-700 dark:bg-black/50"
-            : "bg-white/0"
+            ? "border-b border-gray-200 backdrop-blur-xl  dark:border-gray-700 dark:bg-black/50"
+            : "bg-white/0 dark:border-b dark:border-gray-700"
         } z-30 transition-all`}
       >
         <div className="mx-5 flex h-16 max-w-screen-xl items-center justify-between xl:mx-auto">
