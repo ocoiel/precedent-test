@@ -3,6 +3,7 @@ import type { AppProps } from "next/app";
 import { Analytics } from "@vercel/analytics/react";
 import type { Session } from "next-auth";
 import { SessionProvider } from "next-auth/react";
+import { ThemeProvider } from "next-themes";
 import { Provider as RWBProvider } from "react-wrap-balancer";
 import cx from "classnames";
 import localFont from "@next/font/local";
@@ -23,13 +24,15 @@ export default function MyApp({
   pageProps: { session, ...pageProps },
 }: AppProps<{ session: Session }>) {
   return (
-    <SessionProvider session={session}>
-      <RWBProvider>
-        <main className={cx(sfPro.variable, inter.variable)}>
-          <Component {...pageProps} />
-        </main>
-      </RWBProvider>
-      <Analytics />
-    </SessionProvider>
+    <ThemeProvider enableSystem={true} attribute="class">
+      <SessionProvider session={session}>
+        <RWBProvider>
+          <main className={cx(sfPro.variable, inter.variable)}>
+            <Component {...pageProps} />
+          </main>
+        </RWBProvider>
+        <Analytics />
+      </SessionProvider>
+    </ThemeProvider>
   );
 }

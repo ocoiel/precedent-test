@@ -39,13 +39,13 @@ export default function Home() {
           </p>
         </motion.a>
         <motion.h1
-          className="bg-gradient-to-br from-black to-stone-500 bg-clip-text text-center font-display text-4xl font-bold tracking-[-0.02em] text-transparent drop-shadow-sm md:text-7xl md:leading-[5rem]"
+          className="bg-gradient-to-br from-black to-stone-500 bg-clip-text text-center font-display text-4xl font-bold tracking-[-0.02em] text-transparent drop-shadow-sm dark:from-white dark:to-stone-400 md:text-7xl md:leading-[5rem]"
           variants={FADE_DOWN_ANIMATION_VARIANTS}
         >
           <Balancer>Building blocks for your Next project</Balancer>
         </motion.h1>
         <motion.p
-          className="mt-6 text-center text-gray-500 md:text-xl"
+          className="mt-6 text-center text-gray-500 dark:text-gray-300 md:text-xl"
           variants={FADE_DOWN_ANIMATION_VARIANTS}
         >
           <Balancer>

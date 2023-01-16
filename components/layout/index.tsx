@@ -3,11 +3,12 @@ import { AnimatePresence, motion } from "framer-motion";
 import { useSession } from "next-auth/react";
 import Image from "next/image";
 import Link from "next/link";
-import { ReactNode } from "react";
+import { ReactNode, useState, useEffect } from "react";
 import useScroll from "@/lib/hooks/use-scroll";
 import Meta from "./meta";
 import { useSignInModal } from "./sign-in-modal";
 import UserDropdown from "./user-dropdown";
+import { useTheme } from "next-themes";
 
 export default function Layout({
   meta,
@@ -23,12 +24,17 @@ export default function Layout({
   const { data: session, status } = useSession();
   const { SignInModal, setShowSignInModal } = useSignInModal();
   const scrolled = useScroll(50);
+  const { setTheme, systemTheme, resolvedTheme } = useTheme();
+  const [mounted, setMounted] = useState(false);
+
+  useEffect(() => setMounted(true), []);
+  if (!mounted) return null;
 
   return (
     <>
       <Meta {...meta} />
       <SignInModal />
-      <div className="fixed h-screen w-screen bg-gradient-to-br from-indigo-50 via-white to-cyan-100" />
+      <div className="fixed h-screen w-screen bg-gradient-to-br from-indigo-50 via-white to-cyan-100 transition-all duration-200 dark:from-zinc-900 dark:via-slate-800 dark:to-black" />
       <div
         className={`fixed top-0 w-full ${
           scrolled
@@ -47,7 +53,16 @@ export default function Layout({
             ></Image>
             <p>Precedent</p>
           </Link>
-          <div>
+          <div className="flex gap-2">
+            <motion.button
+              className="rounded-full border border-black bg-black p-1.5 px-4 text-sm text-white transition-all hover:bg-white hover:text-black"
+              onClick={() =>
+                setTheme(resolvedTheme === "dark" ? "light" : "dark")
+              }
+              {...FADE_IN_ANIMATION_SETTINGS}
+            >
+              Theme test
+            </motion.button>
             <AnimatePresence>
               {!session && status !== "loading" ? (
                 <motion.button
