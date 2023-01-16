@@ -77,7 +77,7 @@ export default function Home() {
                 strokeLinejoin="round"
               />
             </svg>
-            <p>Deploy to Vercel</p>
+            <p className="text-center">Deploy to Vercel</p>
           </a>
           <a
             className="flex max-w-fit items-center justify-center space-x-2 rounded-full border border-gray-300 bg-white px-5 py-2 text-sm text-gray-600 shadow-md transition-colors hover:border-gray-800"
@@ -86,7 +86,7 @@ export default function Home() {
             rel="noopener noreferrer"
           >
             <Github />
-            <p>Star on GitHub</p>
+            <p className="text-center">Star on GitHub</p>
           </a>
         </motion.div>
       </motion.div>
