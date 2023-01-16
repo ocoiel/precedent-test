@@ -2641,6 +2641,11 @@ object.values@^1.1.5, object.values@^1.1.6:
     define-properties "^1.1.4"
     es-abstract "^1.20.4"
 
+odometer@^0.4.8:
+  version "0.4.8"
+  resolved "https://registry.yarnpkg.com/odometer/-/odometer-0.4.8.tgz#2f6703bf4c6b384c278236d04d4bc8171abe4374"
+  integrity sha512-bfKuAhWE/qMCiX9bwX90c5bTpt7MDVeq1e6YsOHQrYokNhv9jhS5JbR9kg6i+FeWmDgalf3VUtwNx1aVaZ8cgg==
+
 oidc-token-hash@^5.0.1:
   version "5.0.1"
   resolved "https://registry.yarnpkg.com/oidc-token-hash/-/oidc-token-hash-5.0.1.tgz#ae6beec3ec20f0fd885e5400d175191d6e2f10c6"
@@ -2921,6 +2926,13 @@ react-markdown@^8.0.4:
     unified "^10.0.0"
     unist-util-visit "^4.0.0"
     vfile "^5.0.0"
+
+react-odometerjs@^3.1.0:
+  version "3.1.0"
+  resolved "https://registry.yarnpkg.com/react-odometerjs/-/react-odometerjs-3.1.0.tgz#81674b6edbb38e0414ef3e44f9a5a1ea4a285f3c"
+  integrity sha512-jHG1wyNgg3J7OYaJugixkQTPpUHK5ddfa13XSQlxs5YR5qIWIPwVtjlxSp8xD3UuXjUXjjGAyCyYZ9k3ar8aCg==
+  dependencies:
+    odometer "^0.4.8"
 
 react-remove-scroll-bar@^2.3.3:
   version "2.3.4"

@@ -7,6 +7,7 @@ import { Github, Twitter } from "@/components/shared/icons";
 import WebVitals from "@/components/home/web-vitals";
 import ComponentGrid from "@/components/home/component-grid";
 import Image from "next/image";
+import { GithubStarButton } from "@/components/home/github-start-button";
 
 export default function Home() {
   return (
@@ -86,7 +87,12 @@ export default function Home() {
             rel="noopener noreferrer"
           >
             <Github />
-            <p className="text-center">Star on GitHub</p>
+            <p className="text-center">
+              Star on GitHub{" "}
+              <span className="text-center font-bold">
+                <GithubStarButton />
+              </span>
+            </p>
           </a>
         </motion.div>
       </motion.div>
