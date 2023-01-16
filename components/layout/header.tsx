@@ -1,23 +1,19 @@
 import Link from "next/link";
 import Image from "next/image";
 import { AnimatePresence, motion } from "framer-motion";
-import { useTheme } from "next-themes";
-import { useEffect, useState } from "react";
+import { useState } from "react";
 import useScroll from "@/lib/hooks/use-scroll";
 import { FADE_IN_ANIMATION_SETTINGS } from "@/lib/constants";
 import UserDropdown from "./user-dropdown";
 import { useSession } from "next-auth/react";
 import { useSignInModal } from "./sign-in-modal";
+import ThemeSwitcher from "./theme-switcher";
 
 export default function Header() {
   const { data: session, status } = useSession();
-  const { setTheme, systemTheme, resolvedTheme } = useTheme();
   const { SignInModal, setShowSignInModal } = useSignInModal();
   const [mounted, setMounted] = useState(false);
   const scrolled = useScroll(50);
-
-  useEffect(() => setMounted(true), []);
-  if (!mounted) return null;
 
   return (
     <>
@@ -42,15 +38,7 @@ export default function Header() {
             <p>Precedent</p>
           </Link>
           <div className="flex gap-2">
-            <motion.button
-              className="rounded-full border border-black bg-black p-1.5 px-4 text-sm text-white transition-all hover:bg-white hover:text-black"
-              onClick={() =>
-                setTheme(resolvedTheme === "dark" ? "light" : "dark")
-              }
-              {...FADE_IN_ANIMATION_SETTINGS}
-            >
-              Theme test
-            </motion.button>
+            <ThemeSwitcher />
             <AnimatePresence>
               {!session && status !== "loading" ? (
                 <motion.button
