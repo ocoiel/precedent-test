@@ -11,6 +11,15 @@ export default function Footer() {
         >
           Steven Tey
         </a>
+        and
+        <a
+          className="font-medium text-gray-300 underline transition-colors hover:text-white hover:decoration-wavy hover:transition-all"
+          href="https://twitter.com/shadcn"
+          target="_blank"
+          rel="noopener noreferrer"
+        >
+          shadcn
+        </a>
       </p>
     </div>
   );

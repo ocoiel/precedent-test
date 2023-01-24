@@ -20,7 +20,7 @@ export default function UserDropdown() {
     >
       <Popover
         content={
-          <div className="w-full rounded-md bg-white p-2 sm:w-56">
+          <div className="w-full rounded-md bg-white p-2 dark:bg-black sm:w-56">
             {/* <Link
               className="flex items-center justify-start space-x-2 relative w-full rounded-md p-2 text-left text-sm transition-all duration-75 hover:bg-gray-100"
               href="/dashboard"
@@ -29,14 +29,14 @@ export default function UserDropdown() {
               <p className="text-sm">Dashboard</p>
             </Link> */}
             <button
-              className="relative flex w-full cursor-not-allowed items-center justify-start space-x-2 rounded-md p-2 text-left text-sm transition-all duration-75 hover:bg-gray-100"
+              className="relative flex w-full cursor-not-allowed items-center justify-start space-x-2 rounded-md p-2 text-left text-sm transition-all duration-75 hover:bg-gray-100 dark:bg-black dark:hover:bg-gray-900"
               disabled
             >
               <LayoutDashboard className="h-4 w-4" />
               <p className="text-sm">Dashboard</p>
             </button>
             <button
-              className="relative flex w-full items-center justify-start space-x-2 rounded-md p-2 text-left text-sm transition-all duration-75 hover:bg-gray-100"
+              className="relative flex w-full items-center justify-start space-x-2 rounded-md p-2 text-left text-sm transition-all duration-75 hover:bg-gray-100 dark:bg-black dark:hover:bg-gray-900"
               onClick={() => signOut()}
             >
               <LogOut className="h-4 w-4" />

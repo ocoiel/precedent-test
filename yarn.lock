@@ -3366,6 +3366,11 @@ tabbable@^6.0.1:
   resolved "https://registry.yarnpkg.com/tabbable/-/tabbable-6.0.1.tgz#427a09b13c83ae41eed3e88abb76a4af28bde1a6"
   integrity sha512-SYJSIgeyXW7EuX1ytdneO5e8jip42oHWg9xl/o3oTYhmXusZVgiA+VlPvjIN+kHii9v90AmzTZEBcsEvuAY+TA==
 
+tailwindcss-radix@^2.7.0:
+  version "2.7.0"
+  resolved "https://registry.yarnpkg.com/tailwindcss-radix/-/tailwindcss-radix-2.7.0.tgz#f10ee210aa6fd544312f6adc6e1f84c7cf50bcb7"
+  integrity sha512-fIVkT5zQYdsjT9+/Mvp+DTlJDdTFpRDuyS5+PLuJDAIIVr9+rWYKhK6rsB9QtjwUwwb0YF+BkAJN6CjZivOfLA==
+
 tailwindcss@^3.2.4:
   version "3.2.4"
   resolved "https://registry.yarnpkg.com/tailwindcss/-/tailwindcss-3.2.4.tgz#afe3477e7a19f3ceafb48e4b083e292ce0dc0250"

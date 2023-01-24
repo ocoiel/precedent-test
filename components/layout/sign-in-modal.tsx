@@ -7,7 +7,7 @@ import {
   useCallback,
   useMemo,
 } from "react";
-import { LoadingDots } from "@/components/shared/icons";
+import { LoadingDots, Github } from "@/components/shared/icons";
 import Image from "next/image";
 
 const SignInModal = ({
@@ -63,6 +63,32 @@ const SignInModal = ({
                   height={20}
                 />
                 <p>Sign In with Google</p>
+              </>
+            )}
+          </button>
+          <button
+            disabled={signInClicked}
+            className={`${
+              signInClicked
+                ? "cursor-not-allowed border-gray-200 bg-gray-100 dark:border-gray-900 dark:bg-gray-900"
+                : "border border-gray-200 bg-white text-black hover:bg-gray-50 dark:border-gray-700 dark:bg-black dark:text-white dark:hover:bg-black"
+            } flex h-10 w-full items-center justify-center space-x-3 rounded-md border text-sm shadow-sm transition-all duration-75 focus:outline-none`}
+            onClick={() => {
+              setSignInClicked(true);
+              signIn("github");
+            }}
+          >
+            {signInClicked ? (
+              <LoadingDots color="#808080" />
+            ) : (
+              <>
+                <Image
+                  alt="Github logo"
+                  src="/github.svg"
+                  width={20}
+                  height={20}
+                />
+                <p>Sign In with Github</p>
               </>
             )}
           </button>

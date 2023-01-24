@@ -35,7 +35,10 @@ export default function Header() {
               height="30"
               className="mr-2 rounded-sm"
             ></Image>
-            <p>Precedent</p>
+            <p className="hidden md:inline-block">Precedent</p>
+            <p className="m-2">+</p>
+            <div className="bg-blakc mr-2 h-[30px] w-[30px] rounded-full dark:bg-white"></div>
+            <p className="hidden md:inline-block">Shadcn UI</p>
           </Link>
           <div className="flex gap-2">
             <ThemeSwitcher />
