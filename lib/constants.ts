@@ -94,3 +94,18 @@ export const madeForYouAlbums: Album[] = [
       "https://images.unsplash.com/photo-1598295893369-1918ffaf89a2?w=300&dpr=2&q=80",
   },
 ];
+
+export const playlists = [
+  "Recently Added",
+  "Recently Played",
+  "Top Songs",
+  "Top Albums",
+  "Top Artists",
+  "Logic Discography",
+  "Bedtime Beats",
+  "Feeling Happy",
+  "I miss Y2K Pop",
+  "Runtober",
+  "Mellow Days",
+  "Eminem Essentials",
+];
