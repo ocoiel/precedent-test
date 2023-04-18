@@ -89,164 +89,6 @@ import { listenNowAlbums, madeForYouAlbums, playlists } from "@/lib/constants";
 export default function Dashboard() {
   return (
     <div className="overflow-hidden rounded-md border border-slate-200 bg-gradient-to-b from-rose-500 to-indigo-700 shadow-2xl dark:border-slate-800">
-      <Menubar className="rounded-none border-b border-none dark:bg-slate-900">
-        <MenubarMenu>
-          <MenubarTrigger className="font-bold">Music</MenubarTrigger>
-          <MenubarContent>
-            <MenubarItem>About Music</MenubarItem>
-            <MenubarSeparator />
-            <MenubarItem>
-              Preferences... <MenubarShortcut>⌘,</MenubarShortcut>
-            </MenubarItem>
-            <MenubarSeparator />
-            <MenubarItem>
-              Hide Music... <MenubarShortcut>⌘H</MenubarShortcut>
-            </MenubarItem>
-            <MenubarItem>
-              Hide Others... <MenubarShortcut>⇧⌘H</MenubarShortcut>
-            </MenubarItem>
-            <MenubarShortcut />
-            <MenubarItem>
-              Quit Music <MenubarShortcut>⌘Q</MenubarShortcut>
-            </MenubarItem>
-          </MenubarContent>
-        </MenubarMenu>
-        <MenubarMenu>
-          <MenubarTrigger className="relative">
-            File
-            <DemoIndicator />
-          </MenubarTrigger>
-          <MenubarContent>
-            <MenubarSub>
-              <MenubarSubTrigger>New</MenubarSubTrigger>
-              <MenubarSubContent className="w-[230px]">
-                <MenubarItem>
-                  Playlist <MenubarShortcut>⌘N</MenubarShortcut>
-                </MenubarItem>
-                <MenubarItem disabled>
-                  Playlist from Selection <MenubarShortcut>⇧⌘N</MenubarShortcut>
-                </MenubarItem>
-                <MenubarItem>
-                  Smart Playlist... <MenubarShortcut>⌥⌘N</MenubarShortcut>
-                </MenubarItem>
-                <MenubarItem>Playlist Folder</MenubarItem>
-                <MenubarItem disabled>Genius Playlist</MenubarItem>
-              </MenubarSubContent>
-            </MenubarSub>
-            <MenubarItem>
-              Open Stream URL... <MenubarShortcut>⌘U</MenubarShortcut>
-            </MenubarItem>
-            <MenubarItem>
-              Close Window <MenubarShortcut>⌘W</MenubarShortcut>
-            </MenubarItem>
-            <MenubarSeparator />
-            <MenubarSub>
-              <MenubarSubTrigger>Library</MenubarSubTrigger>
-              <MenubarSubContent>
-                <MenubarItem>Update Cloud Library</MenubarItem>
-                <MenubarItem>Update Genius</MenubarItem>
-                <MenubarSeparator />
-                <MenubarItem>Organize Library...</MenubarItem>
-                <MenubarItem>Export Library...</MenubarItem>
-                <MenubarSeparator />
-                <MenubarItem>Import Playlist...</MenubarItem>
-                <MenubarItem disabled>Export Playlist...</MenubarItem>
-                <MenubarItem>Show Duplicate Items</MenubarItem>
-                <MenubarSeparator />
-                <MenubarItem>Get Album Artwork</MenubarItem>
-                <MenubarItem disabled>Get Track Names</MenubarItem>
-              </MenubarSubContent>
-            </MenubarSub>
-            <MenubarItem>
-              Import... <MenubarShortcut>⌘O</MenubarShortcut>
-            </MenubarItem>
-            <MenubarItem disabled>Burn Playlist to Disc...</MenubarItem>
-            <MenubarSeparator />
-            <MenubarItem>
-              Show in Finder <MenubarShortcut>⇧⌘R</MenubarShortcut>{" "}
-            </MenubarItem>
-            <MenubarItem>Convert</MenubarItem>
-            <MenubarSeparator />
-            <MenubarItem>Page Setup...</MenubarItem>
-            <MenubarItem disabled>
-              Print... <MenubarShortcut>⌘P</MenubarShortcut>
-            </MenubarItem>
-          </MenubarContent>
-        </MenubarMenu>
-        <MenubarMenu>
-          <MenubarTrigger>Edit</MenubarTrigger>
-          <MenubarContent>
-            <MenubarItem disabled>
-              Undo <MenubarShortcut>⌘Z</MenubarShortcut>
-            </MenubarItem>
-            <MenubarItem disabled>
-              Redo <MenubarShortcut>⇧⌘Z</MenubarShortcut>
-            </MenubarItem>
-            <MenubarSeparator />
-            <MenubarItem disabled>
-              Cut <MenubarShortcut>⌘X</MenubarShortcut>
-            </MenubarItem>
-            <MenubarItem disabled>
-              Copy <MenubarShortcut>⌘C</MenubarShortcut>
-            </MenubarItem>
-            <MenubarItem disabled>
-              Paste <MenubarShortcut>⌘V</MenubarShortcut>
-            </MenubarItem>
-            <MenubarSeparator />
-            <MenubarItem>
-              Select All <MenubarShortcut>⌘A</MenubarShortcut>
-            </MenubarItem>
-            <MenubarItem disabled>
-              Deselect All <MenubarShortcut>⇧⌘A</MenubarShortcut>
-            </MenubarItem>
-            <MenubarSeparator />
-            <MenubarItem>
-              Smart Dictation...{" "}
-              <MenubarShortcut>
-                <Mic className="h-4 w-4" />
-              </MenubarShortcut>
-            </MenubarItem>
-            <MenubarItem>
-              Emoji & Symbols{" "}
-              <MenubarShortcut>
-                <Globe className="h-4 w-4" />
-              </MenubarShortcut>
-            </MenubarItem>
-          </MenubarContent>
-        </MenubarMenu>
-        <MenubarMenu>
-          <MenubarTrigger>View</MenubarTrigger>
-          <MenubarContent>
-            <MenubarCheckboxItem>Show Playing Next</MenubarCheckboxItem>
-            <MenubarCheckboxItem checked>Show Lyrics</MenubarCheckboxItem>
-            <MenubarSeparator />
-            <MenubarItem inset disabled>
-              Show Status Bar
-            </MenubarItem>
-            <MenubarSeparator />
-            <MenubarItem inset>Hide Sidebar</MenubarItem>
-            <MenubarItem disabled inset>
-              Enter Full Screen
-            </MenubarItem>
-          </MenubarContent>
-        </MenubarMenu>
-        <MenubarMenu>
-          <MenubarTrigger>Account</MenubarTrigger>
-          <MenubarContent forceMount>
-            <MenubarLabel inset>Switch Account</MenubarLabel>
-            <MenubarSeparator />
-            <MenubarRadioGroup value="benoit">
-              <MenubarRadioItem value="andy">Andy</MenubarRadioItem>
-              <MenubarRadioItem value="benoit">Benoit</MenubarRadioItem>
-              <MenubarRadioItem value="Luis">Luis</MenubarRadioItem>
-            </MenubarRadioGroup>
-            <MenubarSeparator />
-            <MenubarItem inset>Manage Famliy...</MenubarItem>
-            <MenubarSeparator />
-            <MenubarItem inset>Add Account...</MenubarItem>
-          </MenubarContent>
-        </MenubarMenu>
-      </Menubar>
       <div className="p-8">
         <div className="rounded-md bg-white shadow-2xl transition-all dark:bg-slate-900">
           <div className="grid grid-cols-4 xl:grid-cols-5">
@@ -471,7 +313,7 @@ export default function Dashboard() {
                     </div>
                     <Separator className="my-4" />
                     <div className="relative">
-                      <DemoIndicator className="right-auto left-24 top-32 z-30" />
+                      <DemoIndicator className="left-24 right-auto top-32 z-30" />
                       <div className="relative flex space-x-4">
                         {listenNowAlbums.map((album) => (
                           <AlbumArtwork
@@ -492,7 +334,7 @@ export default function Dashboard() {
                     </div>
                     <Separator className="my-4" />
                     <div className="relative">
-                      <DemoIndicator className="top-32 right-auto left-16 z-30" />
+                      <DemoIndicator className="left-16 right-auto top-32 z-30" />
                       <ScrollArea>
                         <div className="flex space-x-4 pb-4">
                           {madeForYouAlbums.map((album) => (
@@ -529,7 +371,7 @@ export default function Dashboard() {
                         <h3 className="mt-4 text-lg font-semibold text-slate-900 dark:text-slate-50">
                           No episodes added
                         </h3>
-                        <p className="mt-2 mb-4 text-sm text-slate-500 dark:text-slate-400">
+                        <p className="mb-4 mt-2 text-sm text-slate-500 dark:text-slate-400">
                           You have not added any podcasts. Add one below.
                         </p>
                         <Dialog>
@@ -537,7 +379,7 @@ export default function Dashboard() {
                             <Button size="sm" className="relative">
                               <Plus className="mr-2 h-4 w-4" />
                               Add Podcast
-                              <DemoIndicator className="-top-1 -right-1 z-30" />
+                              <DemoIndicator className="-right-1 -top-1 z-30" />
                             </Button>
                           </DialogTrigger>
                           <DialogContent>
@@ -645,7 +487,7 @@ export function DemoIndicator({ className }: DemoIndicatorProps) {
   return (
     <span
       className={cn(
-        "absolute top-1 right-0 flex h-5 w-5 animate-bounce items-center justify-center",
+        "absolute right-0 top-1 flex h-5 w-5 animate-bounce items-center justify-center",
         className,
       )}
     >
